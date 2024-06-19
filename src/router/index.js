@@ -1,4 +1,4 @@
-import First from "@/components/views/First.vue";
+import First from "@/components/views/FirstApp.vue";
 
 Vue.use(Router)
 
@@ -10,8 +10,8 @@ export default new Router({
             component: HelloWord
         },{
             path: '/first',
-            name: 'First',
-            component: First
-        },
+            name: 'FirstApp',
+            component: FirstApp
+        }
     ]
 })
