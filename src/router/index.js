@@ -1,17 +1,20 @@
-import First from "@/components/views/FirstApp.vue";
+import { createRouter, createWebHistory } from 'vue-router';
 
-Vue.use(Router)
+//注意 可能分模块打包 路由不要分层，全部是一级
+const routes = [
+  {
+    path: '/',
+    name: 'addNbaTeam',
+    component: () => import('../views/addNbaTeam.vue'),
+    meta: {
+      title: 'NBA'
+    }
+  }
+ 
+];
 
-export default new Router({
-    routers: [
-        {
-            path: '/',
-            name: 'HelloWord',
-            component: HelloWord
-        },{
-            path: '/first',
-            name: 'FirstApp',
-            component: FirstApp
-        }
-    ]
+
+export default createRouter({
+  history: createWebHistory(),
+  routes
 })
